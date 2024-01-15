@@ -8,6 +8,8 @@ import useRegisterModel from "@/app/hooks/useRegisterModel";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
+import { toast } from "react-hot-toast";
+import Button from "../Button";
 
 const RegisterModal = () => {
   const registerModel = useRegisterModel();
@@ -34,13 +36,14 @@ const RegisterModal = () => {
         registerModel.onClose();
       })
       .catch((error) => {
-        console.log(error);
+        toast.error("Something went wrong!");
       })
       .finally(() => {
         setIsLoading(false);
       });
   };
 
+  // BODY CONTENT
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome to Airbnb" subtitle="Create an account!" />
@@ -74,6 +77,34 @@ const RegisterModal = () => {
     </div>
   );
 
+  // FOOTER CONTENT
+  const footerContent = (
+    <div className="flex flex-col gap-4 mt-3">
+      <hr />
+      <Button
+        outline
+        label="Continue with Google"
+        icon={FcGoogle}
+        onClick={() => {}}
+      />
+      <Button
+        outline
+        label="Continue with Github"
+        icon={AiFillGithub}
+        onClick={() => {}}
+      />
+      <div className="justify-center flex flex-row items-center gap-2 text-neutral-500 text-center  font-light">
+        <div>Already have an account?</div>
+        <div
+          className="text-neutral-800 font-normal cursor-pointer hover:underline"
+          onClick={() => registerModel.onClose()}
+        >
+          Login
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <Modal
       disabled={isLoading}
@@ -83,7 +114,7 @@ const RegisterModal = () => {
       onClose={registerModel.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
-      // footer={<RegisterFooter />}
+      footer={footerContent}
     />
   );
 };
