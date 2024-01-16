@@ -4,14 +4,27 @@ import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 import useRegisterModel from "@/app/hooks/useRegisterModel";
+import useLoginModel from "@/app/hooks/useLoginModal";
 
 const UserMenu = () => {
   const registerModal = useRegisterModel();
+  const loginModal = useLoginModel();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
+  const handleLoginClick = () => {
+    toggleOpen();
+    loginModal.onOpen();
+  };
+
+  const handleSignupClick = () => {
+    toggleOpen();
+    registerModal.onOpen();
+  };
+
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
@@ -35,8 +48,8 @@ const UserMenu = () => {
         <div className="absolute rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
           <div className="flex flex-col cursor-pointer">
             <>
-              <MenuItem label="Login" onClick={() => {}} />
-              <MenuItem label="Sign up" onClick={registerModal.onOpen} />
+              <MenuItem label="Login" onClick={handleLoginClick} />
+              <MenuItem label="Sign up" onClick={handleSignupClick} />
             </>
           </div>
         </div>
