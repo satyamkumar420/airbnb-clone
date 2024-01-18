@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { CldUploadWidget } from "next-cloudinary";
 import { TbPhotoPlus } from "react-icons/tb";
 import Image from "next/image";
