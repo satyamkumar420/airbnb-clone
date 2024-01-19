@@ -25,6 +25,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     setIsOpen((value) => !value);
   }, []);
 
+  const handleMenuItemClick = useCallback(() => {
+    toggleOpen();
+  }, [toggleOpen]);
+
   const handleLoginClick = () => {
     toggleOpen();
     loginModal.onOpen();
@@ -67,15 +71,24 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
+                {/* TODO: if click any menu item, close menu */}
                 <MenuItem
                   label="My Trips"
-                  onClick={() => router.push("/trips")}
+                  onClick={() => {
+                    router.push("/trips");
+                    handleMenuItemClick();
+                  }}
                 />
                 <MenuItem label="My Favorites" onClick={() => {}} />
                 <MenuItem label="My Reservations" onClick={() => {}} />
-                <MenuItem label="My Reservations" onClick={() => {}} />
                 <MenuItem label="My Properties" onClick={() => {}} />
-                <MenuItem label="Airbnb my home" onClick={rentModal.onOpen} />
+                <MenuItem
+                  label="Airbnb my home"
+                  onClick={() => {
+                    rentModal.onOpen();
+                    handleMenuItemClick();
+                  }}
+                />
                 <hr />
                 <MenuItem label="Logout" onClick={() => signOut()} />
               </>
