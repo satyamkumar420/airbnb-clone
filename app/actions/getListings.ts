@@ -16,8 +16,8 @@ export default async function getListings(params: IListingsParams) {
     const {
       userId,
       roomCount,
-      bathroomCount,
       guestCount,
+      bathroomCount,
       locationValue,
       startDate,
       endDate,
@@ -40,15 +40,15 @@ export default async function getListings(params: IListingsParams) {
       };
     }
 
-    if (bathroomCount) {
-      query.bathroomCount = {
-        gte: +bathroomCount,
-      };
-    }
-
     if (guestCount) {
       query.guestCount = {
         gte: +guestCount,
+      };
+    }
+
+    if (bathroomCount) {
+      query.bathroomCount = {
+        gte: +bathroomCount,
       };
     }
 
@@ -74,7 +74,6 @@ export default async function getListings(params: IListingsParams) {
         },
       };
     }
-
     const listings = await prisma.listing.findMany({
       where: query,
       orderBy: {
