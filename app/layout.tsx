@@ -16,6 +16,12 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Airbnb Clone",
   description: "Airbnb clone",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+    other: { rel: "apple-touch-icon", url: "/favicon.ico" },
+  },
 };
 
 export default async function RootLayout({
