@@ -47,6 +47,8 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     rentModal.onOpen();
   }, [currentUser, loginModal, rentModal]);
 
+  //Todo: if click menu outside the close menu
+
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
@@ -80,7 +82,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   }}
                 />
                 <MenuItem label="My Favorites" onClick={() => {}} />
-                <MenuItem label="My Reservations" onClick={() => {}} />
+                <MenuItem
+                  label="My Reservations"
+                  onClick={() => {
+                    router.push("/reservations");
+                    handleMenuItemClick();
+                  }}
+                />
                 <MenuItem label="My Properties" onClick={() => {}} />
                 <MenuItem
                   label="Airbnb my home"
