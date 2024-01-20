@@ -11,7 +11,7 @@ import { SafeUser } from "@/app/types";
 import { useRouter } from "next/navigation";
 
 interface UserMenuProps {
-  currentUser: SafeUser | null;
+  currentUser?: SafeUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
@@ -46,8 +46,6 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
     rentModal.onOpen();
   }, [currentUser, loginModal, rentModal]);
-
-  //Todo: if click menu outside the close menu
 
   return (
     <div className="relative">
