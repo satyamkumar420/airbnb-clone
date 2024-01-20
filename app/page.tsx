@@ -17,7 +17,6 @@ const Home = async ({ searchParams }: HomeProps) => {
     return (
       <ClientOnly>
         <EmptyState showReset />
-        kw
       </ClientOnly>
     );
   }
