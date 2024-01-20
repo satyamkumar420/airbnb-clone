@@ -19,7 +19,7 @@ Welcome to our Airbnb Clone web application! Explore and experience the joy of f
 
 ## Preview 📸
 
-[![Preview](https://github.com/satyamkumar420/airbnb-clone/assets/98641231/6cc1f328-7d93-4a1b-9fcc-1c43eca2aa19)](https://airbnb-clone-2024.vercel.app/)
+[![Preview](https://github.com/satyamkumar420/airbnb-clone/assets/98641231/6cc1f328-7d93-4a1b-9fcc-1c43eca2aa19)](https://book-rooms.vercel.app/)
 
 ## Getting Started 🚀
 
@@ -37,4 +37,4 @@ We welcome contributions! If you have ideas for improvements or new features, fe
 
 A big thank you to the open-source community and the contributors who have made this project possible.
 
-Explore the Airbnb Clone [here](https://airbnb-clone-2024.vercel.app/) and happy booking! 🌍✈️
+Explore the Airbnb Clone [here](https://book-rooms.vercel.app/) and happy booking! 🌍✈️
