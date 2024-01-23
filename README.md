@@ -9,6 +9,7 @@ Welcome to our Airbnb Clone web application! Explore and experience the joy of f
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A superset of JavaScript that adds static typing to the language.
 - **MongoDB**: A NoSQL database for flexible, scalable, and high-performance data storage.
+- **Tailwind CSS**: A utility-first CSS framework that makes it easy to design and build modern, responsive user interfaces.
 
 ## Features 🌟
 
@@ -28,13 +29,5 @@ To get started with the Airbnb Clone, follow these steps:
 1. Clone the repository: `git clone https://github.com/satyamkumar420/airbnb-clone.git`
 2. Install dependencies: `npm install`
 3. Run the application: `npm run dev`
-
-## Contributing 🤝
-
-We welcome contributions! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
-
-## Acknowledgments 🙌
-
-A big thank you to the open-source community and the contributors who have made this project possible.
 
 Explore the Airbnb Clone [here](https://book-rooms.vercel.app/) and happy booking! 🌍✈️
