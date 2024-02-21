@@ -22,12 +22,5 @@ Welcome to our Airbnb Clone web application! Explore and experience the joy of f
 
 [![Preview](https://github.com/satyamkumar420/airbnb-clone/assets/98641231/6cc1f328-7d93-4a1b-9fcc-1c43eca2aa19)](https://book-rooms.vercel.app/)
 
-## Getting Started 🚀
-
-To get started with the Airbnb Clone, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/satyamkumar420/airbnb-clone.git`
-2. Install dependencies: `npm install`
-3. Run the application: `npm run dev`
 
 Explore the Airbnb Clone [here](https://book-rooms.vercel.app/) and happy booking! 🌍✈️
